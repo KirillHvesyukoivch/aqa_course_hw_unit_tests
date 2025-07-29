@@ -4,3 +4,9 @@
 n + nn + nnn, где n не перемножаются, а конкатенируются
 
 */
+function multiplier( n){
+let nn = Number(String(n) + n)
+let nnn = Number(String(n) + n + n)
+console.log(n + nn + nnn)
+}
+multiplier(5)
