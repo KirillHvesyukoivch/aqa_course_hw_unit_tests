@@ -7,8 +7,7 @@
   const salary = 1000;
   let grade; 
   if (salary >= 1000){
-grade = "middle";
-  }
-  else if (salary < 1000 && salary > 0){
+    grade = "middle";
+  } else {
     grade = "junior";
   }
