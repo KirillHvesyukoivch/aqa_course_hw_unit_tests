@@ -18,10 +18,9 @@ switch(true){
     case consonants.test(word[i]):
         consonantsCount++;
         break;
+    }
 }
-}
-vowelsAndConsonantsResult = `${word} contains ${vowelsCount} vowels and ${consonantsCount} consonants`;
-console.log(vowelsAndConsonantsResult)
 
+vowelsAndConsonantsResult = `${word} contains ${vowelsCount} vowels and ${consonantsCount} consonants`;
 
 export { vowelsAndConsonantsResult };
