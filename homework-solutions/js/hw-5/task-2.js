@@ -18,4 +18,21 @@
  */
 let fizzBuzzResult = '';
 
+for(let i = 1; i <= 100; i++){
+   switch(true){
+    case i%3 == 0 && i%5 == 0:
+        fizzBuzzResult += `${i} - делится и на 3 и на 5\n`;
+        break;
+    case i%5 == 0:
+        fizzBuzzResult += `${i} - делится на 5\n`;
+        break;
+    case i%3 == 0:
+         fizzBuzzResult += `${i} - делится на 3\n`;
+         break;
+    default:
+         fizzBuzzResult += `${i}\n`
+   } 
+}
+fizzBuzzResult = fizzBuzzResult.trimEnd();
+
 export { fizzBuzzResult };
