@@ -13,7 +13,27 @@
   const myPizzasT2 = ['Peperoni', 'Caprichosa', 'Diablo', '4 cheeses', 'hawai'];
 */
 
-let resultUnique;
+
+let resultUnique = [];
 let resultNull;
+
+const competitorPizzas = ['Peperoni', 'Caprichosa', 'Diablo', '4 cheeses', 'hawai']
+const myPizzasT1 = ['Peperoni', 'Margherita', 'Diablo', 'Vegetarian'];
+const myPizzasT2 = ['Peperoni', 'Caprichosa', 'Diablo', '4 cheeses', 'hawai'];
+
+function isUnique(myPizzas){
+  const resultUniqueTemp = resultUnique.length;
+  for( let i = 0; i < myPizzas.length; i++){
+    if(!competitorPizzas.some((el) => el.toLowerCase() === myPizzas[i].toLowerCase())){
+      resultUnique.push(myPizzas[i]);
+    }
+  if (resultUnique.length === resultUniqueTemp){
+    resultNull = null;
+  }
+
+}
+} 
+isUnique(myPizzasT1);
+isUnique(myPizzasT2);
 
 export { resultNull, resultUnique };
