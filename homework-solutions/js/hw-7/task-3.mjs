@@ -9,7 +9,11 @@
 */
 
 function digitalRoot(number) {
-  // Ваш код
+  let transformedNumber = number.toString().split('');
+  let sum = transformedNumber.reduce((count, el) => count + Number(el),0);
+  if (sum > 9) return digitalRoot(sum);
+  else return sum
 }
+console.log(digitalRoot(777))
 
 export { digitalRoot };
