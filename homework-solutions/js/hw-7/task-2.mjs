@@ -28,22 +28,22 @@ function findLongestWords(sentence) {
   let wordBuf = "";
   for(let i = 0; i <= sentence.length; i ++){
     if(sentence[i]!== " " && sentence[i]!== undefined ){
-      WordBuf = WordBuf + sentence[i];
+      wordBuf = wordBuf + sentence[i];
     }
     else{
-      if (LongestWordSize === WordBuf.length ) {
-        longestWords.push(WordBuf);
-        LongestWordSize = WordBuf.length;
-        WordBuf = ""
+      if (longestWordSize === wordBuf.length ) {
+        longestWords.push(wordBuf);
+        longestWordSize = wordBuf.length;
+        wordBuf = ""
     }
-    else if (WordBuf.length > LongestWordSize ){
+    else if (wordBuf.length > longestWordSize ){
       longestWords.length = 0;
-      longestWords.push(WordBuf);
-       LongestWordSize = WordBuf.length;
-       WordBuf = "";
+      longestWords.push(wordBuf);
+       longestWordSize = wordBuf.length;
+       wordBuf = "";
     }
-    else if (WordBuf.length < LongestWordSize){
-       WordBuf = "";
+    else if (wordBuf.length < longestWordSize){
+       wordBuf = "";
     }
 
   }
