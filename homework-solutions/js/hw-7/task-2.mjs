@@ -23,7 +23,7 @@ function isPalindrom(word) {
 function findLongestWords(sentence) {
   let longestWords = []
   if (typeof sentence !== "string") return longestWords;
-  if (sentence === "") return longestWords;
+  if (sentence.trim() === "") return longestWords;
   let longestWordSize = 0;
   let wordBuf = "";
   for(let i = 0; i <= sentence.length; i ++){
