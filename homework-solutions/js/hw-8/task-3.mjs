@@ -7,7 +7,18 @@
 */
 
 function findMissingNumber(numbers) {
-  // Ваш код
-}
+  let sortedBuf = numbers.toSorted((a, b) => a - b);
+  let buf = 0;
+  sortedBuf.some((el) => {
+    if(el - buf === 2) {
+      buf +=1
+      return true ;
+    }
+    else buf = el;
+  //  console.log(buf)
+  })
+  if ( buf ===sortedBuf[sortedBuf.length - 1] ) buf++;
+  return buf;
+  }
 
 export { findMissingNumber };
