@@ -9,6 +9,12 @@
 
 function countOccurrences(arr) {
   // ваш код
+return arr.reduce((resultObject, el) =>{
+  if (resultObject[el]) resultObject[el]++;
+  else resultObject[el] = 1;
+  return resultObject
+},{})
 }
+countOccurrences([1, 2, 2, 3, 4, 4, 4, 5]);
 
 export { countOccurrences };
