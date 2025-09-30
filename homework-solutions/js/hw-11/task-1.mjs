@@ -1,35 +1,35 @@
 class Employee {
-  firstName = 'Djon';
-  lastName = 'Deer';
-  profession = 'jetPilot';
+  _firstName = 'Djon';
+  _lastName = 'Deer';
+  _profession = 'jetPilot';
   #salary = 0;
  constructor (firstName, lastName, profession, salary ){
   this.firstName = firstName;
-   this.lastName = lastName;
-    this.profession = profession;
-     this.salary = salary;
+  this.lastName = lastName;
+  this.profession = profession;
+  this.salary = salary;
  }
   get firstName(){
-    return  this.firstName;
+    return  this._firstName;
   } 
   set firstName(firstName){
-    this.firstName = firstName;
+    this._firstName = firstName;
   }
-    get lastName(){
-    return  this.lastName;
+  get lastName(){
+    return  this._lastName;
   } 
   set lastName(lastName){
-    this.lastName = lastName;
+    this._lastName = lastName;
   }
 
-    get profession(){
-    return  this.profession;
+  get profession(){
+    return  this._profession;
   } 
   set profession(profession){
-    this.profession =profession;
+    this._profession =profession;
   }
 
-    get salary(){
+  get salary(){
     return  this.#salary;
   } 
   set salary(salary){
@@ -44,9 +44,9 @@ class Employee {
 }
 
 class Company {
-    title = "";
-   phone  = 0;
-   address = "";
+  _title = "";
+  _phone  = 0;
+  _address = "";
   #employees = [];
 
   constructor (title, phone, address ){
@@ -56,13 +56,13 @@ class Company {
   }
 
  get title(){
-    return  this.title;
+    return  this._title;
   } 
    get phone(){
-    return  this.phone;
+    return  this._phone;
   } 
    get address(){
-    return  this.address;
+    return  this._address;
   } 
  addEmployee(employee){
   if (employee instanceof Employee) this.#employees.push(employee)
